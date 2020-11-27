@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>书籍列表</title>
+    <style>
+        tr{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <table border="1px" align="center">
+
+        {%for i in s%}
+            <tr>
+                <td>{{i.id}}</td>
+                <td><a href="{{url_for('content',id = i.id)}}">{{i.bookname}}</a></td>
+                <td><a href="{{i.url}}">{{i.url}}</a></td>
+            </tr>
+        {%endfor%}
+    </table>
+
+</form>
+</body>
+</html>
